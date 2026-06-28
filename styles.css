@@ -1,0 +1,114 @@
+/* =====================================================================
+   Ca L'Isabel — Custom styles
+   Tailwind (via CDN) handles most utilities. This file holds the bits
+   Tailwind can't express cleanly: smooth scrolling, scroll-reveal
+   animation, the masonry gallery, and a few hover refinements.
+   ===================================================================== */
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for the fixed navbar when jumping to anchors */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Navbar ---- */
+/* Solid-ish background applied via JS once the user scrolls past the hero. */
+#navbar.scrolled {
+  background-color: rgba(250, 246, 240, 0.92); /* brand cream */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 20px rgba(43, 38, 34, 0.08);
+  color: #2B2622; /* brand charcoal */
+}
+
+/* At the top of the page (over the dark hero) keep the nav text light. */
+#navbar:not(.scrolled) {
+  color: #FAF6F0; /* brand cream */
+}
+
+/* Animated underline for desktop nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background-color: #C9A66B; /* brand gold */
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ---- Menu items ---- */
+.menu-item {
+  transition: transform 0.25s ease;
+}
+.menu-item:hover {
+  transform: translateX(4px);
+}
+
+/* ---- Scroll reveal ---- */
+/* Elements tagged [data-reveal] start hidden and fade up when they enter the
+   viewport. The `.is-visible` class is toggled by an IntersectionObserver in main.js.
+   IMPORTANT: the hidden state is gated behind `html.js` (a class added by an inline
+   script in <head>). If JavaScript is disabled or fails to run, this rule never
+   applies and all content stays fully visible — content is never silently hidden. */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+html.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- Gallery: CSS masonry via columns ---- */
+.masonry {
+  column-count: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
+  .masonry { column-count: 2; }
+}
+@media (min-width: 1024px) {
+  .masonry { column-count: 3; }
+}
+
+.masonry-item {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  display: block;
+  break-inside: avoid;            /* keep an image from splitting across columns */
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  filter: saturate(0.95);
+  cursor: pointer;
+}
+.masonry-item:hover {
+  transform: scale(1.02);
+  filter: saturate(1.1);
+  box-shadow: 0 12px 30px rgba(43, 38, 34, 0.18);
+}

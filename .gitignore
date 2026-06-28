@@ -1,0 +1,10 @@
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.log
+
+# Local tooling settings (keep launch.json, ignore machine-specific overrides)
+.claude/settings.local.json
+
+# Dependencies (none currently, but just in case)
+node_modules/
