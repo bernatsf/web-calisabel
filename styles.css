@@ -48,6 +48,29 @@ body {
   width: 100%;
 }
 
+/* ---- Menu language toggle (CA / ES / EN) ---- */
+.menu-lang-btn {
+  border: 1px solid rgba(43, 38, 34, 0.25); /* brand charcoal @ 25% */
+  color: rgba(43, 38, 34, 0.65);
+  border-radius: 9999px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+.menu-lang-btn:hover {
+  border-color: #B5532A; /* brand terracotta */
+  color: #B5532A;
+}
+.menu-lang-btn.active {
+  background-color: #B5532A;
+  border-color: #B5532A;
+  color: #FAF6F0; /* brand cream */
+}
+
 /* ---- Menu items ---- */
 .menu-item {
   transition: transform 0.25s ease;

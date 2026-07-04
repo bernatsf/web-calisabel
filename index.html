@@ -63,7 +63,7 @@
         <li><a href="#contacte" class="nav-link">Contacte</a></li>
       </ul>
 
-      <a href="#carta"
+      <a href="https://wa.me/34662278576" target="_blank" rel="noopener"
          class="hidden md:inline-block bg-brand-terracotta text-brand-cream text-xs uppercase tracking-widest px-5 py-3 rounded-full hover:bg-brand-charcoal transition-colors duration-300">
         Reservar
       </a>
@@ -83,6 +83,7 @@
         <li><a href="#carta" class="mobile-link block py-1">La Carta</a></li>
         <li><a href="#galeria" class="mobile-link block py-1">Galeria</a></li>
         <li><a href="#contacte" class="mobile-link block py-1">Contacte</a></li>
+        <li><a href="https://wa.me/34662278576" target="_blank" rel="noopener" class="mobile-link block py-1 text-brand-terracotta">Reservar</a></li>
       </ul>
     </div>
   </header>
@@ -218,9 +219,17 @@
              class="rounded-xl shadow-md w-full h-48 lg:h-56 object-cover" />
       </div>
 
+      <!-- Language toggle: switches ONLY dish and category names (rest of the site stays in Catalan).
+           Translations live in main.js (MENU_I18N); arrays there must match the DOM order below. -->
+      <div id="menu-lang" class="flex justify-center gap-3 mb-12" data-reveal>
+        <button type="button" data-lang="ca" class="menu-lang-btn active" aria-pressed="true">CA</button>
+        <button type="button" data-lang="es" class="menu-lang-btn" aria-pressed="false">ES</button>
+        <button type="button" data-lang="en" class="menu-lang-btn" aria-pressed="false">EN</button>
+      </div>
+
       <!-- Two-column grid keeps the longer carta readable without breaking the
            clean look; categories flow side by side on tablet/desktop, stacked on mobile. -->
-      <div class="grid md:grid-cols-2 gap-x-14 gap-y-14">
+      <div id="menu-grid" class="grid md:grid-cols-2 gap-x-14 gap-y-14">
 
         <!-- Per entretenir-se -->
         <div data-reveal>
