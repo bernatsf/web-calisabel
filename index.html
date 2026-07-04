@@ -89,15 +89,11 @@
 
   <!-- ============================ HERO ============================ -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-    <!--
-      ▼▼▼ BACKGROUND IMAGE PLACEHOLDER ▼▼▼
-      Replace the URL below with a high-quality, wide background photo (recommended: 2400×1600px, JPG).
-      Ideal subject: the dining room, a signature dish, or the restaurant facade.
-    -->
+    <!-- Hero background: real photo of the dining room.
+         NOTE: file paths are case-sensitive on GitHub Pages — must match "IMG_####.PNG" exactly. -->
     <div class="absolute inset-0 bg-cover bg-center"
-         style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2400&q=80');">
+         style="background-image:url('images/IMG_3255.PNG');">
     </div>
-    <!-- ▲▲▲ END BACKGROUND IMAGE PLACEHOLDER ▲▲▲ -->
 
     <!-- Dark overlay for legibility -->
     <div class="absolute inset-0 bg-brand-charcoal/55"></div>
@@ -129,13 +125,10 @@
   <section id="sobre" class="py-24 lg:py-32 px-6 lg:px-10">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div data-reveal>
-        <!--
-          ▼ ABOUT IMAGE PLACEHOLDER — replace with a warm photo of the kitchen,
-            Isabel, or the dining room (recommended: 1000×1200px portrait).
-        -->
+        <!-- About: real interior photo (portrait, fits the tall frame). -->
         <img
-          src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1000&q=80"
-          alt="L'essència de Ca L'Isabel"
+          src="images/IMG_3254.PNG"
+          alt="L'ambient interior de Ca L'Isabel"
           class="rounded-2xl shadow-xl w-full h-[28rem] object-cover" />
       </div>
 
@@ -175,6 +168,16 @@
         <p class="text-brand-charcoal/70">
           Una selecció que canvia amb les estacions i amb el que ens ofereix el mercat cada dia.
         </p>
+      </div>
+
+      <!-- Feature band: three signature dishes to whet the appetite before the list. -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16" data-reveal>
+        <img src="images/IMG_3266.PNG" alt="Arròs melós de la casa"
+             class="rounded-xl shadow-md w-full h-48 lg:h-56 object-cover" />
+        <img src="images/IMG_3272.PNG" alt="Tonyina vermella a la brasa"
+             class="rounded-xl shadow-md w-full h-48 lg:h-56 object-cover" />
+        <img src="images/IMG_3271.PNG" alt="Suprema de peix amb arròs de tomàquet"
+             class="rounded-xl shadow-md w-full h-48 lg:h-56 object-cover" />
       </div>
 
       <!-- Two-column grid keeps the longer carta readable without breaking the
@@ -331,31 +334,25 @@
         </p>
       </div>
 
-      <!--
-        ▼▼▼ GALLERY IMAGE PLACEHOLDERS ▼▼▼
-        This is a CSS masonry (columns) layout. Replace each `src` below with the photos
-        downloaded from the restaurant's Instagram. Keep the `alt` text descriptive in Catalan.
-        Recommended: square or portrait JPGs, ~800px wide. The layout adapts to any aspect ratio.
-      -->
+      <!-- Real Instagram photos in a CSS masonry (columns) layout.
+           Paths are case-sensitive on GitHub Pages — keep "IMG_####.PNG" exactly. -->
       <div class="masonry" data-reveal>
-        <!-- INSTAGRAM PHOTO 1 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Plat principal de la casa" />
-        <!-- INSTAGRAM PHOTO 2 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="L'ambient del menjador" />
-        <!-- INSTAGRAM PHOTO 3 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" alt="Entrant fred de temporada" />
-        <!-- INSTAGRAM PHOTO 4 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Pasta fresca feta a casa" />
-        <!-- INSTAGRAM PHOTO 5 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Peix fresc del mercat" />
-        <!-- INSTAGRAM PHOTO 6 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=800&q=80" alt="Postres de la casa" />
-        <!-- INSTAGRAM PHOTO 7 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Detall d'una recepta tradicional" />
-        <!-- INSTAGRAM PHOTO 8 → replace src -->
-        <img class="masonry-item" src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80" alt="Producte fresc de proximitat" />
+        <img class="masonry-item" src="images/IMG_3257.PNG" alt="L'entrada de Ca L'Isabel" />
+        <img class="masonry-item" src="images/IMG_3259.PNG" alt="Llagostins a la planxa" />
+        <img class="masonry-item" src="images/IMG_3252.PNG" alt="El nostre menjador" />
+        <img class="masonry-item" src="images/IMG_3262.PNG" alt="Guisat amb parmentier" />
+        <img class="masonry-item" src="images/IMG_3256.PNG" alt="La nostra selecció de vins" />
+        <img class="masonry-item" src="images/IMG_3261.PNG" alt="Steak tartar tallat a mà" />
+        <img class="masonry-item" src="images/IMG_3267.PNG" alt="Bacallà amb panxeta ibèrica" />
+        <img class="masonry-item" src="images/IMG_3253.PNG" alt="Una taula parada amb cura" />
+        <img class="masonry-item" src="images/IMG_3264.PNG" alt="Fricandó amb verdures" />
+        <img class="masonry-item" src="images/IMG_3270.PNG" alt="Un racó de la casa" />
+        <img class="masonry-item" src="images/IMG_3268.PNG" alt="Cassola de marisc" />
+        <img class="masonry-item" src="images/IMG_3258.PNG" alt="Plat de temporada" />
+        <img class="masonry-item" src="images/IMG_3265.PNG" alt="Arròs de la casa" />
+        <img class="masonry-item" src="images/IMG_3269.PNG" alt="Les nostres postres" />
+        <img class="masonry-item" src="images/IMG_3263.PNG" alt="Plat de carn amb salsa" />
       </div>
-      <!-- ▲▲▲ END GALLERY IMAGE PLACEHOLDERS ▲▲▲ -->
     </div>
   </section>
 
